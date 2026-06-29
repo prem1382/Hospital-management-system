@@ -723,11 +723,8 @@ async function startServer() {
     }
   });
 
-  // ------------------------------------------------------------------
-  // VITE & STATIC FILES SERVING MIDDLEWARE
-  // ------------------------------------------------------------------
+  // ... munnadi ulla codes ...
 
-  // Vite development setup vs production serving
   // ------------------------------------------------------------------
   // VITE & STATIC FILES SERVING MIDDLEWARE
   // ------------------------------------------------------------------
@@ -739,7 +736,6 @@ async function startServer() {
     });
     app.use(vite.middlewares);
   } else {
-    // server.cjs 'dist' folder ullaeye irukkuradhaal directly __dirname use panrom
     const distPath = path.join(__dirname); 
     app.use(express.static(distPath));
     app.get("*", (req, res) => {
@@ -747,8 +743,9 @@ async function startServer() {
     });
   }
 
-  // Render check panna dynamic port line
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Hospital Server running on port ${PORT}`);
   });
+}
+
 startServer();
