@@ -2,8 +2,7 @@
 
 This contains everything you need to run your app locally.
 
-View your app:https://hospital-management-system-2-6oz3.onrender.com
-
+View your app:https://hospital-management-system-3-mg65.onrender.com
 ## Run Locally
 
 **Prerequisites:**  Node.js
